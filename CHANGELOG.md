@@ -1,3 +1,7 @@
+# 1.4.7 - 17 Nov 2025
+Bug fix:
+- remove trailing slash on Windows
+
 # 1.4.6 - 3 Nov 2025
 Bug fix:
 - normalize path only when unsafe

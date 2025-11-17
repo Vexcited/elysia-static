@@ -245,7 +245,7 @@ export async function staticPlugin<const Prefix extends string = '/prefix'>({
         }
 
         app.onError(() => {}).get(
-            `${prefix}/*`,
+            `${prefix.endsWith('/') ? prefix.slice(0, -1) : prefix}/*`,
             async ({ params, headers: requestHeaders }) => {
                 const pathName = normalizePath(
                     path.join(
